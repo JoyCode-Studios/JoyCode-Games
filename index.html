@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>JoyCode Games Hub Developers</title>
+  <title>JoyCode Games Hub</title>
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
@@ -11,101 +11,69 @@
       color: #333;
       margin: 0;
       padding: 2rem;
+      text-align: center;
+    }
+
+    header {
+      margin-bottom: 2rem;
     }
 
     h1 {
-      text-align: center;
+      font-size: 2.5rem;
       color: #2b2d42;
     }
 
-    form {
-      max-width: 600px;
-      margin: 2rem auto;
-      background: #fff;
-      padding: 2rem;
-      border-radius: 8px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 1rem auto 2rem;
     }
 
-    label {
-      display: block;
-      margin-top: 1rem;
-      font-weight: bold;
-    }
-
-    input[type="text"],
-    input[type="email"],
-    textarea,
-    input[type="file"] {
-      width: 100%;
-      padding: 0.75rem;
-      margin-top: 0.5rem;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      font-size: 1rem;
-    }
-
-    textarea {
-      resize: vertical;
-      min-height: 100px;
-    }
-
-    .checkbox-container {
-      margin-top: 1.5rem;
+    .button-container {
       display: flex;
-      align-items: flex-start;
-    }
-
-    .checkbox-container input[type="checkbox"] {
-      margin-right: 0.75rem;
-      margin-top: 0.2rem;
-    }
-
-    button {
+      flex-direction: column;
+      gap: 1rem;
+      align-items: center;
       margin-top: 2rem;
+    }
+
+    a.button {
+      display: inline-block;
+      width: 300px;
       padding: 0.75rem 1.5rem;
       background-color: #0077cc;
       color: white;
-      border: none;
+      text-decoration: none;
       border-radius: 4px;
       font-size: 1rem;
-      cursor: pointer;
+      transition: background-color 0.3s ease;
     }
 
-    button:hover {
+    a.button:hover {
       background-color: #005fa3;
+    }
+
+    footer {
+      margin-top: 3rem;
+      font-size: 0.9rem;
+      color: #777;
     }
   </style>
 </head>
 <body>
-  <h1>JoyCode Games Hub Developers</h1>
-  <form action="https://formsubmit.co/joy-game-dev@joycode.co.uk" method="POST" enctype="multipart/form-data">
-    <label for="email">Your Email</label>
-    <input type="email" id="email" name="Developer Email" placeholder="you@example.com" required />
+  <header>
+    <h1>Welcome to JoyCode Games Hub</h1>
+    <p>Explore indie creations, submit your own games, and join a community built for creators. Every game here is a spark of joy — engineered with passion, powered by trust.</p>
+  </header>
 
-    <label for="title">Game Title</label>
-    <input type="text" id="title" name="Game Title" required />
+  <div class="button-container">
+    <a href="genres/puzzle/index.html" class="button">Mint VS Chocolate Ice Cream: Multiplayer</a>
+    <a href="genres/racing/index.html" class="button">Roll Through Chaos</a>
+    <a href="developers.html" class="button">Developers</a>
+  </div>
 
-    <label for="description">Game Description</label>
-    <textarea id="description" name="Description" required></textarea>
-
-    <label for="controls">Controls</label>
-    <input type="text" id="controls" name="Controls" placeholder="e.g. Arrow keys to move, Space to jump" required />
-
-    <label for="zip">Upload Game ZIP</label>
-    <input type="file" id="zip" name="Game ZIP" accept=".zip" required />
-
-    <div class="checkbox-container">
-      <input type="checkbox" id="rights-confirmation" name="Rights Confirmation" required />
-      <label for="rights-confirmation">
-        I confirm I have the rights to submit this and give JoyCode Studios the required rights to put my game on JoyCode Games Hub
-      </label>
-    </div>
-
-    <input type="hidden" name="_next" value="https://joycode.co.uk/thank-you.html" />
-    <input type="hidden" name="_captcha" value="false" />
-
-    <button type="submit">Submit Game</button>
-  </form>
+  <footer>
+    &copy; 2025 JoyCode Studios. All rights reserved.
+  </footer>
 </body>
 </html>
