@@ -1,40 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>JoyCode Games</title>
-  <link rel="shortcut icon" href="favicon.png" type="image/png">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>JoyCode Games Hub Developers</title>
   <style>
     body {
-      font-family: sans-serif;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f4f4f8;
+      color: #333;
+      margin: 0;
+      padding: 2rem;
+    }
+
+    h1 {
       text-align: center;
-      margin-top: 100px;
-      background-color: #f0f0f0;
+      color: #2b2d42;
     }
-    .chaos-button {
-      background-color: #007BFF; /* Blue */
-      color: white;
-      padding: 15px 30px;
-      font-size: 18px;
-      border: none;
+
+    form {
+      max-width: 600px;
+      margin: 2rem auto;
+      background: #fff;
+      padding: 2rem;
       border-radius: 8px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
-    .chaos-button:hover {
-      background-color: #0056b3;
+
+    label {
+      display: block;
+      margin-top: 1rem;
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea,
+    input[type="file"] {
+      width: 100%;
+      padding: 0.75rem;
+      margin-top: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 1rem;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    .checkbox-container {
+      margin-top: 1.5rem;
+      display: flex;
+      align-items: flex-start;
+    }
+
+    .checkbox-container input[type="checkbox"] {
+      margin-right: 0.75rem;
+      margin-top: 0.2rem;
+    }
+
+    button {
+      margin-top: 2rem;
+      padding: 0.75rem 1.5rem;
+      background-color: #0077cc;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #005fa3;
     }
   </style>
 </head>
 <body>
-  <button class="chaos-button" onclick="location.href='genres/puzzle/index.html'">
-    Roll Through Chaos
-  </button>
-  <button class="chaos-button" style="margin-left: 20px;" onclick="location.href='developers.html'">
-    Developers
-  </button>
-  <button class="chaos-button" onclick="location.href='genres/puzzle/index.html'">
-    Mint VS Chocolate Ice Cream: Multiplayer
-  </button>
+  <h1>JoyCode Games Hub Developers</h1>
+  <form action="https://formsubmit.co/joy-game-dev@joycode.co.uk" method="POST" enctype="multipart/form-data">
+    <label for="email">Your Email</label>
+    <input type="email" id="email" name="Developer Email" placeholder="you@example.com" required />
+
+    <label for="title">Game Title</label>
+    <input type="text" id="title" name="Game Title" required />
+
+    <label for="description">Game Description</label>
+    <textarea id="description" name="Description" required></textarea>
+
+    <label for="controls">Controls</label>
+    <input type="text" id="controls" name="Controls" placeholder="e.g. Arrow keys to move, Space to jump" required />
+
+    <label for="zip">Upload Game ZIP</label>
+    <input type="file" id="zip" name="Game ZIP" accept=".zip" required />
+
+    <div class="checkbox-container">
+      <input type="checkbox" id="rights-confirmation" name="Rights Confirmation" required />
+      <label for="rights-confirmation">
+        I confirm I have the rights to submit this and give JoyCode Studios the required rights to put my game on JoyCode Games Hub
+      </label>
+    </div>
+
+    <input type="hidden" name="_next" value="https://joycode.co.uk/thank-you.html" />
+    <input type="hidden" name="_captcha" value="false" />
+
+    <button type="submit">Submit Game</button>
+  </form>
 </body>
 </html>
