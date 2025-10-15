@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>JoyCode Games Hub Developers</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f4f4f8;
+      color: #333;
+      margin: 0;
+      padding: 2rem;
+    }
+
+    h1 {
+      text-align: center;
+      color: #2b2d42;
+    }
+
+    form {
+      max-width: 600px;
+      margin: 2rem auto;
+      background: #fff;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    label {
+      display: block;
+      margin-top: 1rem;
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    textarea,
+    input[type="file"] {
+      width: 100%;
+      padding: 0.75rem;
+      margin-top: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 1rem;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    button {
+      margin-top: 1.5rem;
+      padding: 0.75rem 1.5rem;
+      background-color: #0077cc;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #005fa3;
+    }
+  </style>
+</head>
+<body>
+  <h1>JoyCode Games Hub Developers</h1>
+  <form action="https://formsubmit.co/joy-game-dev@joycode.co.uk" method="POST" enctype="multipart/form-data">
+    <label for="title">Game Title</label>
+    <input type="text" id="title" name="Game Title" required />
+
+    <label for="description">Game Description</label>
+    <textarea id="description" name="Description" required></textarea>
+
+    <label for="controls">Controls</label>
+    <input type="text" id="controls" name="Controls" placeholder="e.g. Arrow keys to move, Space to jump" required />
+
+    <label for="zip">Upload Game ZIP</label>
+    <input type="file" id="zip" name="Game ZIP" accept=".zip" required />
+
+    <!-- Optional: Redirect after submission -->
+    <input type="hidden" name="_next" value="https://joycode.co.uk/thank-you.html" />
+    <input type="hidden" name="_captcha" value="false" />
+
+    <button type="submit">Submit Game</button>
+  </form>
+</body>
+</html>
