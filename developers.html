@@ -34,6 +34,7 @@
     }
 
     input[type="text"],
+    input[type="email"],
     textarea,
     input[type="file"] {
       width: 100%;
@@ -49,8 +50,19 @@
       min-height: 100px;
     }
 
-    button {
+    .checkbox-container {
       margin-top: 1.5rem;
+      display: flex;
+      align-items: flex-start;
+    }
+
+    .checkbox-container input[type="checkbox"] {
+      margin-right: 0.75rem;
+      margin-top: 0.2rem;
+    }
+
+    button {
+      margin-top: 2rem;
       padding: 0.75rem 1.5rem;
       background-color: #0077cc;
       color: white;
@@ -68,6 +80,9 @@
 <body>
   <h1>JoyCode Games Hub Developers</h1>
   <form action="https://formsubmit.co/joy-game-dev@joycode.co.uk" method="POST" enctype="multipart/form-data">
+    <label for="email">Your Email</label>
+    <input type="email" id="email" name="Developer Email" placeholder="you@example.com" required />
+
     <label for="title">Game Title</label>
     <input type="text" id="title" name="Game Title" required />
 
@@ -80,7 +95,13 @@
     <label for="zip">Upload Game ZIP</label>
     <input type="file" id="zip" name="Game ZIP" accept=".zip" required />
 
-    <!-- Optional: Redirect after submission -->
+    <div class="checkbox-container">
+      <input type="checkbox" id="rights-confirmation" name="Rights Confirmation" required />
+      <label for="rights-confirmation">
+        I confirm I have the rights to submit this and give JoyCode Studios the required rights to put my game on JoyCode Games Hub
+      </label>
+    </div>
+
     <input type="hidden" name="_next" value="https://joycode.co.uk/thank-you.html" />
     <input type="hidden" name="_captcha" value="false" />
 
